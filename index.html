@@ -28,6 +28,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#CV">CV</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
@@ -109,6 +110,69 @@
                 </div>
             </section>
             <hr class="m-0" /> 
+
+            <section class="resume-section" id="gallery">
+                <div class="resume-section-content">
+                    <head>
+                        <title>Responsive Video Grid</title>
+                        <style>
+                            .video-grid {
+                                display: grid;
+                                grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+                                grid-gap: 10px;
+                                padding: 10px;
+                            }
+                            .video-container, .image-container {
+                                border: 1px solid rgba(70, 66, 66, 1); /* Faint border */
+                                padding: 5px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center; /* Center content for smaller images */
+                            }
+                            .video-grid video {
+                                width: 100%;
+                                height: auto;
+                            }
+                            .image-container img {
+                                max-width: 65%; /* Smaller size for images */
+                                height: auto;
+                            }
+                            .video-title, .image-title {
+                                text-align: center;
+                                margin-top: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                    
+                    <h2 class="mb-5">Gallery</h2>
+                    <div class="video-grid">
+                        <div class="video-container">
+                            <div class="video-title">Trefoil knot in state space</div>
+                            <video autoplay muted loop>
+                                <source src="assets/video/trefoil_animation.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-title">Lognormal distributions emerge from positive Gaussian noise</div>
+                            <video autoplay muted loop>
+                            <source src="assets/video/lognormal_simulation.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-container">
+                            <div class="video-title">Neural manifolds in macaque visual cortex</div>
+                            <video autoplay muted loop>
+                            <source src="assets/video/manifolds_and_data.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="image-container">
+                            <div class="image-title">Neuron densities follow a lognormal distribution</div>
+                            <img src="assets/img/lognormal_cover.png">
+                        </div>
+                    </div>
+                    </body>
+                </div>
+            </section>
             <!-- Experience
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
