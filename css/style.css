@@ -254,3 +254,150 @@ h3 {
     margin-bottom: 30px; /* More space between different experiences */
 }
 
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Didot', serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Container is responsive */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures the header content wraps on small screens */
+}
+
+.img-profile {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+}
+
+.header-text {
+    text-align: center;
+}
+
+/* Responsive section titles */
+section h2 {
+    font-size: 2em;
+    color: #26581c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Vertical Line for Experience Grouping */
+.grouped-content {
+    border-left: 2px solid #26581c;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+/* Mobile-Responsive Adjustments using Media Queries */
+@media (max-width: 768px) {
+    /* Make the container take up more space on small screens */
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* Adjust the font sizes for smaller screens */
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    .subheading {
+        font-size: 1em;
+    }
+
+    .small-text {
+        font-size: 0.85em;
+    }
+
+    /* Make the header stack vertically on small screens */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ensure text in grouped content doesn't get too close to the vertical line */
+    .grouped-content {
+        padding-left: 10px;
+    }
+
+    /* Adjust margins and padding for a tighter, mobile-friendly layout */
+    .experience-item {
+        margin-bottom: 20px;
+    }
+
+    /* Social Icons */
+    .social-icon {
+        font-size: 1.3em;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce font sizes for smaller mobile screens */
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    .subheading {
+        font-size: 0.9em;
+    }
+
+    .small-text {
+        font-size: 0.8em;
+    }
+
+    /* Adjust image size */
+    .img-profile {
+        max-width: 100px;
+    }
+
+    /* Reduce padding for mobile */
+    .grouped-content {
+        padding-left: 5px;
+    }
+
+    /* Reduce spacing between experience items */
+    .experience-item {
+        margin-bottom: 15px;
+    }
+}
