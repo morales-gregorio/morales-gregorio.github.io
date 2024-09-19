@@ -1,0 +1,256 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Didot', serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #26581c;
+    color: white;
+    padding: 50px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img-profile {
+    max-width: 200px; /* Control the size */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+}
+
+.header-text {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 0px;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+.large-margin {
+    margin-bottom: 25px;
+}
+
+.small-text {
+    font-size: 0.8em; /* Adjust this value as needed */
+    line-height: 1.4; /* Optional: Adjust line height for readability */
+    margin-bottom: 5px;
+}
+
+
+/* General Link Styles */
+a {
+    color: #26581c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1f4b19;
+}
+
+/* Header Specific Links - Ensure these override global link styles */
+header a {
+    color: white !important; /* Force the header links to be white */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #d4e7cb !important; /* Light green on hover */
+}
+
+
+/* Social Media Icon Styling */
+.social-icon {
+    color: white; /* Ensures social media icons are white in the header */
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #d4e7cb; /* Light green on hover for social icons */
+}
+
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #26581c;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #26581c;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Main Content */
+main {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #26581c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+section p, section ul li {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Media Section */
+.media-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.image-container, .video-container {
+    flex: 1 1 48%;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+
+/* Section Titles */
+h2 {
+    font-size: 1.6em; /* Smaller section title */
+    color: #26581c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.4em; /* Smaller heading for Education/Work Experience */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Vertical Line to group text */
+.grouped-content {
+    border-left: 2px solid #26581c; /* Vertical line color */
+    padding-left: 15px; /* Space between the line and the text */
+    margin-bottom: 30px; /* Space between each item */
+}
+
+.experience-item h4 {
+    font-size: 1.2em; /* Titles for universities/jobs */
+    color: #26581c;
+    margin-bottom: 3px; /* Tighter space between title and subheading */
+}
+
+.subheading {
+    font-size: 1em; /* Degree/position */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px; /* Minimal space between subheading and dates */
+}
+
+.small-text {
+    font-size: 0.85em; /* Dates text */
+    color: #666;
+    margin-bottom: 0px; /* Tighter spacing between text */
+}
+
+/* Extra spacing between different grouped items */
+.experience-item {
+    margin-bottom: 30px; /* More space between different experiences */
+}
+
