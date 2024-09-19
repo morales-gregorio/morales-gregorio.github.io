@@ -10,12 +10,16 @@ body {
     color: #333;
     background-color: #f5f5f5;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Container is responsive */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; /* Add padding to prevent overflow */
+    margin-bottom: 10px;
 }
 
 /* Header */
@@ -30,10 +34,12 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Ensures the header content wraps on small screens */
+    max-width: 100%; /* Prevents overflow */
 }
 
 .img-profile {
-    max-width: 200px; /* Control the size */
+    max-width: 150px;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,6 +48,7 @@ header {
 
 .header-text {
     text-align: center;
+    max-width: 100%; /* Prevents text from overflowing */
 }
 
 header h1 {
@@ -100,7 +107,6 @@ header a:hover {
     color: #d4e7cb; /* Light green on hover for social icons */
 }
 
-
 /* Navigation */
 nav {
     background-color: #fff;
@@ -138,6 +144,7 @@ main {
     padding: 50px 0;
 }
 
+/* Section Titles */
 section h2 {
     font-size: 2em;
     color: #26581c;
@@ -146,18 +153,86 @@ section h2 {
     padding-bottom: 10px;
 }
 
-section p, section ul li {
+h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #26581c;
+    margin-bottom: 1px;
+}
+
+.h4-cv {
+    font-weight: 300
+}
+
+/* Subheading and Small Text */
+.subheading {
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: #333;
+    margin-bottom: 1px;
+}
+
+.small-text {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 0px;
+}
+
+/* Authors Styling */
+.publication-authors {
+    font-size: 0.9em;
+    color: #404040;
+    margin-bottom: 0px;
+    font-weight: 300;
+}
+
+/* Title Styling */
+.publication-title {
     font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.publication-title a {
+    color: #26581c;
+    text-decoration: none;
+}
+
+.publication-title a:hover {
+    text-decoration: underline;
+}
+
+/* Metadata Styling */
+.publication-metadata {
+    font-size: 0.9em;
+    color: #666;
     margin-bottom: 20px;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
+.text-primary {
+    color: #000000;
 }
 
-ul li {
-    margin-bottom: 10px;
+/* Adjusting Spacing Between Sections */
+#publications .experience-item {
+    margin-bottom: 30px;
+}
+
+/* Experience Item Styling */
+.experience-item {
+    margin-bottom: 30px; /* More space between different experiences */
+}
+
+.grouped-content {
+    border-left: 2px solid #26581c; /* Vertical line color */
+    padding-left: 15px; /* Space between the line and the text */
+    margin-bottom: 30px; /* Space between each item */
+    max-width: 100%; /* Prevents overflow */
 }
 
 /* Media Section */
@@ -207,111 +282,6 @@ footer p {
     font-size: 1em;
 }
 
-
-/* Section Titles */
-h2 {
-    font-size: 1.6em; /* Smaller section title */
-    color: #26581c;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 8px;
-}
-
-h3 {
-    font-size: 1.4em; /* Smaller heading for Education/Work Experience */
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Vertical Line to group text */
-.grouped-content {
-    border-left: 2px solid #26581c; /* Vertical line color */
-    padding-left: 15px; /* Space between the line and the text */
-    margin-bottom: 30px; /* Space between each item */
-}
-
-.experience-item h4 {
-    font-size: 1.2em; /* Titles for universities/jobs */
-    color: #26581c;
-    margin-bottom: 3px; /* Tighter space between title and subheading */
-}
-
-.subheading {
-    font-size: 1em; /* Degree/position */
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 2px; /* Minimal space between subheading and dates */
-}
-
-.small-text {
-    font-size: 0.85em; /* Dates text */
-    color: #666;
-    margin-bottom: 0px; /* Tighter spacing between text */
-}
-
-/* Extra spacing between different grouped items */
-.experience-item {
-    margin-bottom: 30px; /* More space between different experiences */
-}
-
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Didot', serif;
-    color: #333;
-    background-color: #f5f5f5;
-    line-height: 1.6;
-}
-
-/* Container is responsive */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Responsive Header */
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures the header content wraps on small screens */
-}
-
-.img-profile {
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid white;
-}
-
-.header-text {
-    text-align: center;
-}
-
-/* Responsive section titles */
-section h2 {
-    font-size: 2em;
-    color: #26581c;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
-
-/* Vertical Line for Experience Grouping */
-.grouped-content {
-    border-left: 2px solid #26581c;
-    padding-left: 15px;
-    margin-bottom: 30px;
-}
-
 /* Mobile-Responsive Adjustments using Media Queries */
 @media (max-width: 768px) {
     /* Make the container take up more space on small screens */
@@ -345,6 +315,7 @@ section h2 {
     .header-content {
         flex-direction: column;
         text-align: center;
+        width: 100%; /* Ensure it fits within the screen */
     }
 
     /* Ensure text in grouped content doesn't get too close to the vertical line */
@@ -400,4 +371,37 @@ section h2 {
     .experience-item {
         margin-bottom: 15px;
     }
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /*Reduced min width to prevent overflow*/
+    grid-gap: 10px;
+    padding: 10px;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.video-container, .image-container {
+    border: 1px solid rgba(70, 66, 66, 1); /* Faint border */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; /* Prevent overflow from the container */
+}
+
+.video-grid video {
+    max-width: 100%; /* Prevent overflow */
+    height: auto;
+}
+
+.image-container img {
+    max-width: 65%; /* Make image fully responsive */
+    height: auto;
+}
+
+.video-title, .image-title {
+    text-align: center;
+    margin-top: 5px;
+    max-width: 100%; /* Ensure title does not overflow */
 }
