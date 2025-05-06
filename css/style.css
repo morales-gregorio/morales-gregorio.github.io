@@ -5,13 +5,18 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     font-family: 'Didot', serif;
     color: #333;
     background-color: #f5f5f5;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+  }
 
 /* Container is responsive */
 .container {
@@ -61,15 +66,8 @@ header p {
 }
 
 .large-margin {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
-
-.small-text {
-    font-size: 0.8em; /* Adjust this value as needed */
-    line-height: 1.4; /* Optional: Adjust line height for readability */
-    margin-bottom: 5px;
-}
-
 
 /* General Link Styles */
 a {
@@ -79,7 +77,11 @@ a {
 }
 
 a:hover {
-    color: #1f4b19;
+    color: #112e0d;
+}
+
+main p a:hover {
+    text-decoration: underline;
 }
 
 /* Header Specific Links - Ensure these override global link styles */
@@ -87,25 +89,39 @@ header a {
     color: white !important; /* Force the header links to be white */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: font-size 0.3s ease, color 0.3s ease;
 }
 
 header a:hover {
-    color: #d4e7cb !important; /* Light green on hover */
+    font-size: 1.2em;
+    color: #8eb67b !important; /* Light green on hover */
+    text-decoration: underline;
 }
 
 
 /* Social Media Icon Styling */
 .social-icon {
-    color: white; /* Ensures social media icons are white in the header */
+    text-decoration: none;
     font-size: 1.5em;
-    margin-right: 15px;
-    transition: color 0.3s ease;
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white; /* Icon color */
+  }
 
 .social-icon:hover {
-    color: #d4e7cb; /* Light green on hover for social icons */
+    transform: scale(1.6);
+    color: #88ac78; /* Light green on hover for social icons */
+    text-decoration: none;
 }
+
+.bluesky-icon {
+    width: 0.9em;
+    height: 0.9em;
+    fill: currentColor;
+  }
 
 /* Navigation */
 nav {
@@ -139,10 +155,17 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Main Content */
-main {
-    padding: 50px 0;
+nav ul li a.active {
+    background-color: #26581c;
+    color: white;
+    border-radius: 4px;
 }
+
+/* Main Content */ 
+  main {
+    padding: 50px 0;
+    flex: 1; /* this pushes footer to the bottom when content is short */
+  }
 
 /* Section Titles */
 section h2 {
@@ -177,10 +200,16 @@ h4 {
     margin-bottom: 1px;
 }
 
+.about-text {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 0px;
+}
+
 .small-text {
     font-size: 0.85em;
     color: #666;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 /* Authors Styling */
